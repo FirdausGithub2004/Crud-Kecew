@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sederhana CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD Sederhana dengan JSON</h1>
+        <form id="crud-form">
+            <input type="hidden" id="index" value="">
+            <input type="text" id="name" placeholder="Nama" required>
+            <input type="text" id="email" placeholder="Email" required>
+            <button type="submit">Simpan</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Data akan ditambahkan secara dinamis -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
