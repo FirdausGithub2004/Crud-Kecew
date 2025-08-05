@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sederhana CRUD</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>CRUD Sederhana dengan JSON</h1>
+        <h1>CRUD Sederhana dengan Flask & JSON</h1>
         <form id="crud-form">
-            <input type="hidden" id="index" value="">
+            <input type="hidden" id="item-id" value="">
             <input type="text" id="name" placeholder="Nama" required>
             <input type="text" id="email" placeholder="Email" required>
             <button type="submit">Simpan</button>
@@ -25,10 +25,10 @@
                 </tr>
             </thead>
             <tbody id="table-body">
-                <!-- Data akan ditambahkan secara dinamis -->
+                <!-- Data akan dimuat oleh JavaScript -->
             </tbody>
         </table>
     </div>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
